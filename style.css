@@ -1,0 +1,26 @@
+h1{
+background-color: #078cc0;
+text-align: center;
+border-style: bold;
+border-radius: 10px;
+border-color: #078cc0;
+}
+
+button{
+background-color: #078cc0;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+}
+
+button:hover {
+background-color: #005f7a;
+animation: pulse 1s infinite;
+}

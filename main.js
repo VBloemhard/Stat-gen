@@ -27,8 +27,22 @@ function rollChar() {
     let strElement = document.querySelector("#str");
     strElement.textContent = "STR: " + rollStat();
 
+    let dexElement = document.querySelector("#dex");
+    dexElement.textContent = "DEX: " + rollStat();
+
+    let conElement = document.querySelector("#con");
+    conElement.textContent = "CON: " + rollStat();
+
+    let intElement = document.querySelector("#int");
+    intElement.textContent = "INT: " + rollStat();
+
+    let wisElement = document.querySelector("#wis");
+    wisElement.textContent = "WIS: " + rollStat();
+
+    let chaElement = document.querySelector("#cha");
+    chaElement.textContent = "CHA: " + rollStat();
 }
 rollChar();
 
 let button = document.querySelector("#rollstat");
-button.addEventListener("click", rollStat);
+button.addEventListener("click", rollChar);
