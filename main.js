@@ -1,3 +1,8 @@
+const names = ["Bob", "Cadira", "Krshia", "Relc", "Klippy", "Craigh"];
+const races = ["Human", "Elf", "Dwarf", "Halfling", "Orc", "goblin"];
+const classes = ["Fighter", "Warlock", "Paladin", "Sorcerer", "Monk"];
+
+
 function rollDice() {
     let randomNumber = Math.random() * 6;
     let numroundup = Math.ceil(randomNumber);
@@ -41,8 +46,31 @@ function rollChar() {
 
     let chaElement = document.querySelector("#cha");
     chaElement.textContent = "CHA: " + rollStat();
+
+    let nameElement = document.querySelector("#CharacterName");
+
+    let CharacterName = getrandomname();
+    nameElement.textContent = "Name: " + CharacterName + " the " + getrandomrace() + " " + getrandomclass();
+
+    
+
 }
 rollChar();
 
 let button = document.querySelector("#rollstat");
 button.addEventListener("click", rollChar);
+
+function getrandomname() {
+    let randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
+}
+
+function getrandomrace() {
+    let randomIndex = Math.floor(Math.random() * races.length);
+    return races[randomIndex];
+}
+
+function getrandomclass() {
+    let randomIndex = Math.floor(Math.random() * classes.length);
+    return classes[randomIndex];
+}
